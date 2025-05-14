@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Software para restaurantes que agiliza la toma de comandas y actualiza en tiempo real la disponibilidad de platos. Optimiza tu servicio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLATO CHECK</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="img/logo.webp">
+</head>
+<body>
+
+<!-- #BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <a href="#" class="nav__logo"><img src="./img/logo.webp" loading="lazy" alt="logocolor" px="50" height="50" ></a>
+        <div class="logo">PLATO CHECK</div>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Platos y productos</a></li>
+          <li><a href="#">Quiénes somos</a></li>
+        </ul>
+      <label for="barrabúsqueda"></label>
+      <input type="text" id="barrabúsqueda" name="barrabúsqueda" required><br><br>
+      <button id="search"><i class='user'></i>Buscar</button>
+    </nav>
+
+<!-- #INICIO -->
+<h1> PLATO  🍽  CHECK </h1>
+<div class="container"><img src="img/logoBN.webp" loading="lazy" alt="logoblanco/negro" px="500" height=250 "></div>
+
+<h2>¡Satisface a tus clientes con órdenes ágiles y seguras!</h2>
+
+<hr>
+
+
+<!-- #PLATOS Y PRODUCTOS -->
+
+<section class="container section section__height" id="Platos y productos">
+  
+  <div>
+      <div class="menus">
+          <div style="margin-block: auto;">
+              <button class="btn" onclick="filterProducts('Hamburguesas')">Hamburguesas</button>
+              <button class="btn" onclick="filterProducts('Perros calientes')">Perros calientes</button>
+              <button class="btn" onclick="filterProducts('Salchipapas')">Salchipapas</button>
+              <button class="btn" onclick="filterProducts('Pizzas')">Pizzas</button>
+              <button class="btn" onclick="filterProducts('Antojos del pacífico')">Antojos del pacífico</button>
+              <button class="btn" onclick="filterProducts('Todos')">Mostrar Todos</button>
+          </div>
+      </div>
+      <div class="Platos-container">
+
+
+        <div class="product" data-category="chasis">
+          <img src="img/hamburguesasencilla.webp" alt="hamburguesa">
+          
+          <!-- onmouseover="showImage(this, '')" 
+          onmouseout="hideImage(this, '')"/>   -->
+          <h3>Hamburguesa res sencilla</h3>              
+          <p class="description">Hamburguesa res sencilla valor $15.000.</p>
+          <button class="btn">Disponible</button>
+      </div>
+      <div class="product" data-category="-------------">                
+          <img src="IMAGEN PONER" alt="----------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '-----------------')" 
+          onmouseout="hideImage(this, '-------------')"/>  
+          <h3>-----------</h3>              
+          <p class="description">------------------</p>
+          <button class="btn">Disponible</button>
+      </div>
+      <div class="product" data-category="------------">                
+          <img src="assets/img/fuente_1.jpeg" alt="-------------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, 'assets/img/fuente_1_1.jpeg')" 
+          onmouseout="hideImage(this, 'assets/img/fuente_1.jpeg')"/>  
+          <h3>------------</h3>              
+          <p class="description">------------------------</p>
+          <button class="btn">Disponible</button>
+      </div>
+      <div class="product" data-category="-------------------">                
+          <img src="------------------" alt="--------------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '----------------')" 
+          onmouseout="hideImage(this, '------------------')"/>  
+          <h3>------------</h3>              
+          <p class="description">. $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+      <div class="product" data-category="--------------">                
+          <img src="----------------" alt="--------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '-------------------')" 
+          onmouseout="hideImage(this, '-----------------')"/>  
+          <h3>-----------------</h3>              
+          <p class="description"> $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+      <div class="product" data-category="-----------------------">                
+          <img src="-------------------" alt="----------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '-----------------')" 
+          onmouseout="hideImage(this, '----------------------')"/>  
+          <h3>-----------</h3>              
+          <p class="description"> $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+      <div class="product" data-category="--------------------------">                
+          <img src="-------------------" alt="---------------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '-----------------')" 
+          onmouseout="hideImage(this, '----------------')"/>  
+          <h3>------------- </h3>              
+          <p class="description"> valor $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+          
+      <div class="product" data-category="--------------------">                
+          <img src="-----------------" alt="------------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '----------------------')" 
+          onmouseout="hideImage(this, '------------------')"/>  
+          <h3>--------- </h3>              
+          <p class="description"> valor $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+      
+      <div class="product" data-category="-----------------">                
+          <img src="---------------------" alt="-------------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '-------------------')" 
+          onmouseout="hideImage(this, '-----------------')"/>  
+          <h3>------------ </h3>              
+          <p class="description"> valor $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+
+      <div class="product" data-category="-------------------">                
+          <img src="----------------------" alt="------------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '------------------')" 
+          onmouseout="hideImage(this, '-----------------------')"/>  
+          <h3>------------ </h3>              
+          <p class="description"> valor $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+      
+      <div class="product" data-category="----------------------">                
+          <img src="--------------" alt="---------------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '----------------')" 
+          onmouseout="hideImage(this, '---------------------')"/>  
+          <h3>---------------</h3>              
+          <p class="description"> valor $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+
+      <div class="product" data-category="---------------------">                
+          <img src="-----------------------" alt="--------------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '-----------------------')" 
+          onmouseout="hideImage(this, '------------------')"/>  
+          <h3>----------- </h3>              
+          <p class="description">valor $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+
+      <div class="product" data-category="---------------------">                
+          <img src="----------------" alt="--------------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '-----------------')" 
+          onmouseout="hideImage(this, '--------------------')"/>  
+          <h3>----------- </h3>              
+          <p class="description">valor $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+
+      <div class="product" data-category="------------------">                
+          <img src="-------------------" alt="-----------"  onclick="toggleDescription(this)" 
+          onmouseover="showImage(this, '------------------')" 
+          onmouseout="hideImage(this, '-------------------')"/>  
+          <h3>----------- </h3>              
+          <p class="description">--------------. $.</p>
+          <button class="btn">Disponible</button>
+      </div>
+      
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+</body>
+</html>
