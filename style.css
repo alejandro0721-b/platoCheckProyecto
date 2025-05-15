@@ -4,6 +4,8 @@ body {
      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
      color: #374151;
      align-items: center;
+     margin: 0;
+     padding: 0;
 }
 /* Estilos para el botón */
  #barrabúsqueda {
@@ -64,42 +66,9 @@ body {
 }
  .nav-links li a:hover {
      color: #4d77f6a8;
-}
-/*=============== PRODUCT ===============*/
- .Platos-container {
-     display: flex;
-     flex-wrap: wrap-reverse;
-     justify-content: space-between;
-     height: auto;
-    /* Asegura que el contenedor se ajuste a la cantidad de productos */
-}
- .product {
-     flex: 1 1 200px;
-    /* Crecimiento y reducciÃ³n, y ancho base */
-     margin: 10px;
-    /* Espaciado entre productos */
-     background-repeat: no-repeat;
-     background-size: cover;
-     padding: 20px;
-}
- .product .description {
-     display: none;
-    /* Inicialmente oculto */
-     margin-top: 10px;
-     padding: 20px;
-}
- .product img {
-     width: 250px;
-    /* Asegura que la imagen no exceda el ancho del contenedor */
-     height: 30vh;
-    /* Mantiene la proporciÃ³n de la imagen */
-     cursor: pointer;
-    /* Cambia el cursor al pasar sobre la imagen */
-     transition: opacity 0.3s ease;
-    /* Suaviza la transiciÃ³n de la imagen */
-     padding: 25px;
-}
+ }
 
+/*Productos*/
 .btn{
     height: 30px;
     padding: 5px;
@@ -112,4 +81,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.productos{
+
+}
+.btnDisponibilidad{
+    height: 30px;
+    padding: 5px;
+    border: solid;
+    border-radius: 5px;
 }

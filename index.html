@@ -5,7 +5,7 @@
     <meta name="description" content="Software para restaurantes que agiliza la toma de comandas y actualiza en tiempo real la disponibilidad de platos. Optimiza tu servicio.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLATO CHECK</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpg" href="img/logo.webp">
 </head>
 <body>
@@ -15,9 +15,10 @@
         <a href="#" class="nav__logo"><img src="./img/logo.webp" loading="lazy" alt="logocolor" px="50" height="50" ></a>
         <div class="logo">PLATO CHECK</div>
         <ul class="nav-links">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Platos y productos</a></li>
-          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="platos.html">Platos y productos</a></li>
+          <li><a href="quienesSomos.html">Quiénes somos</a></li>
+          <li><a href="contactanos.html">Contactanos</a></li>
         </ul>
       <label for="barrabúsqueda"></label>
       <input type="text" id="barrabúsqueda" name="barrabúsqueda" required><br><br>
@@ -35,8 +36,9 @@
 
 <!-- #PLATOS Y PRODUCTOS -->
 
-<section class="container section section__height" id="Platos y productos">
+<section class="Platos y productos">
   
+    <!--Botones de menus-->
   <div>
       <div class="menus">
           <div style="margin-block: auto;">
@@ -48,132 +50,52 @@
               <button class="btn" onclick="filterProducts('Todos')">Mostrar Todos</button>
           </div>
       </div>
-      <div class="Platos-container">
+      <div class="productos">
+        <img src="/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa Sencilla de res</h3>
+        <p>Poner descripcion y precio</p>
+        <button class="btnDisponibilidad">Disponible</button>
+      </div>
+      <div>
+        <img src="/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa de pollo sencilla</h3>
+        <p>Poner descripcion y precio</p>
+        <button class="btnDisponibilidad">Disponible</button>
+      </div>
+      <div>
+        <img src="/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa de res doble</h3>
+        <p>Poner descripcion y precio</p>
+        <button class="btnDisponibilidad">Disponible</button>
+      </div>
+      <div>
+        <img src="/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa de pollo doble</h3>
+        <p>Poner descripcion y precio</p>
+        <button class="btnDisponibilidad">Disponible</button>
+      </div>
+    <!--Quienes somos-->
+    <section id="quienes-somos">
+        <h2>Quienes Somos</h2>
+        <p>En Plato Check somos el aliado tecnológico que revoluciona el servicio en tu restaurante. Ofrecemos un sistema intuitivo para gestionar comandas y actualizar al instante la disponibilidad de cada plato, evitando sorpresas y optimizando tiempos. Nuestro compromiso es brindar soluciones confiables y fáciles de usar, para que tu equipo pueda concentrarse en lo más importante: la experiencia de tus comensales.</p>
 
 
-        <div class="product" data-category="chasis">
-          <img src="img/hamburguesasencilla.webp" alt="hamburguesa">
-          
-          <!-- onmouseover="showImage(this, '')" 
-          onmouseout="hideImage(this, '')"/>   -->
-          <h3>Hamburguesa res sencilla</h3>              
-          <p class="description">Hamburguesa res sencilla valor $15.000.</p>
-          <button class="btn">Disponible</button>
-      </div>
-      <div class="product" data-category="-------------">                
-          <img src="IMAGEN PONER" alt="----------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '-----------------')" 
-          onmouseout="hideImage(this, '-------------')"/>  
-          <h3>-----------</h3>              
-          <p class="description">------------------</p>
-          <button class="btn">Disponible</button>
-      </div>
-      <div class="product" data-category="------------">                
-          <img src="assets/img/fuente_1.jpeg" alt="-------------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, 'assets/img/fuente_1_1.jpeg')" 
-          onmouseout="hideImage(this, 'assets/img/fuente_1.jpeg')"/>  
-          <h3>------------</h3>              
-          <p class="description">------------------------</p>
-          <button class="btn">Disponible</button>
-      </div>
-      <div class="product" data-category="-------------------">                
-          <img src="------------------" alt="--------------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '----------------')" 
-          onmouseout="hideImage(this, '------------------')"/>  
-          <h3>------------</h3>              
-          <p class="description">. $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-      <div class="product" data-category="--------------">                
-          <img src="----------------" alt="--------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '-------------------')" 
-          onmouseout="hideImage(this, '-----------------')"/>  
-          <h3>-----------------</h3>              
-          <p class="description"> $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-      <div class="product" data-category="-----------------------">                
-          <img src="-------------------" alt="----------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '-----------------')" 
-          onmouseout="hideImage(this, '----------------------')"/>  
-          <h3>-----------</h3>              
-          <p class="description"> $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-      <div class="product" data-category="--------------------------">                
-          <img src="-------------------" alt="---------------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '-----------------')" 
-          onmouseout="hideImage(this, '----------------')"/>  
-          <h3>------------- </h3>              
-          <p class="description"> valor $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-          
-      <div class="product" data-category="--------------------">                
-          <img src="-----------------" alt="------------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '----------------------')" 
-          onmouseout="hideImage(this, '------------------')"/>  
-          <h3>--------- </h3>              
-          <p class="description"> valor $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-      
-      <div class="product" data-category="-----------------">                
-          <img src="---------------------" alt="-------------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '-------------------')" 
-          onmouseout="hideImage(this, '-----------------')"/>  
-          <h3>------------ </h3>              
-          <p class="description"> valor $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-
-      <div class="product" data-category="-------------------">                
-          <img src="----------------------" alt="------------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '------------------')" 
-          onmouseout="hideImage(this, '-----------------------')"/>  
-          <h3>------------ </h3>              
-          <p class="description"> valor $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-      
-      <div class="product" data-category="----------------------">                
-          <img src="--------------" alt="---------------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '----------------')" 
-          onmouseout="hideImage(this, '---------------------')"/>  
-          <h3>---------------</h3>              
-          <p class="description"> valor $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-
-      <div class="product" data-category="---------------------">                
-          <img src="-----------------------" alt="--------------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '-----------------------')" 
-          onmouseout="hideImage(this, '------------------')"/>  
-          <h3>----------- </h3>              
-          <p class="description">valor $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-
-      <div class="product" data-category="---------------------">                
-          <img src="----------------" alt="--------------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '-----------------')" 
-          onmouseout="hideImage(this, '--------------------')"/>  
-          <h3>----------- </h3>              
-          <p class="description">valor $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-
-      <div class="product" data-category="------------------">                
-          <img src="-------------------" alt="-----------"  onclick="toggleDescription(this)" 
-          onmouseover="showImage(this, '------------------')" 
-          onmouseout="hideImage(this, '-------------------')"/>  
-          <h3>----------- </h3>              
-          <p class="description">--------------. $.</p>
-          <button class="btn">Disponible</button>
-      </div>
-      
+    </section>
+    <section id="contactanos">
+        <h2>Formulario de contacto</h2>
+        <form action="#" method="post">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electronico" required>
+            <input type="number" placeholder="Telefono" required>
+            <input type="text" placeholder="Restaurante" required>
+            <textarea name="" id=""></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    <footer>
+        <p>&copy;Todos los derechos reservados 2025 - PlatoCheck</p>
+    </footer>
+    </section>
   </div>
-</div>
 
 </section>
 
