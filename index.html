@@ -11,8 +11,9 @@
 <body>
 
 <!-- #BARRA DE NAVEGACIÓN -->
+
     <nav class="navbar">
-        <a href="#" class="nav__logo"><img src="./img/logo.webp" loading="lazy" alt="logocolor" px="50" height="50" ></a>
+        <a href="#"><img class="nav_logo" src="./img/logo.webp" loading="lazy" alt="logocolor"></a>
         <div class="logo">PLATO CHECK</div>
         <ul class="nav-links">
           <li><a href="index.html">Inicio</a></li>
@@ -42,38 +43,40 @@
   <div>
       <div class="menus">
           <div style="margin-block: auto;">
-              <button class="btn" onclick="filterProducts('Hamburguesas')">Hamburguesas</button>
-              <button class="btn" onclick="filterProducts('Perros calientes')">Perros calientes</button>
-              <button class="btn" onclick="filterProducts('Salchipapas')">Salchipapas</button>
-              <button class="btn" onclick="filterProducts('Pizzas')">Pizzas</button>
-              <button class="btn" onclick="filterProducts('Antojos del pacífico')">Antojos del pacífico</button>
-              <button class="btn" onclick="filterProducts('Todos')">Mostrar Todos</button>
+              <button class="btnMenus" onclick="filterProducts('Hamburguesas')">Hamburguesas</button>
+              <button class="btnMenus" onclick="filterProducts('Perros calientes')">Perros calientes</button>
+              <button class="btnMenus" onclick="filterProducts('Salchipapas')">Salchipapas</button>
+              <button class="btnMenus" onclick="filterProducts('Pizzas')">Pizzas</button>
+              <button class="btnMenus" onclick="filterProducts('Antojos del pacífico')">Antojos del pacífico</button>
+              <button class="btnMenus" onclick="filterProducts('Todos')">Mostrar Todos</button>
           </div>
       </div>
-      <div class="productos">
+    <section id="platos">
+      <div class="producto">
         <img src="/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
         <h3>Hamburguesa Sencilla de res</h3>
         <p>Poner descripcion y precio</p>
-        <button class="btnDisponibilidad">Disponible</button>
+        <button class="btnDisponibilidad">Ordenar</button>
       </div>
-      <div>
+      <div class="producto">
         <img src="/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
         <h3>Hamburguesa de pollo sencilla</h3>
         <p>Poner descripcion y precio</p>
-        <button class="btnDisponibilidad">Disponible</button>
+        <button class="btnDisponibilidad">Ordenar</button>
       </div>
-      <div>
+      <div class="producto">
         <img src="/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
         <h3>Hamburguesa de res doble</h3>
         <p>Poner descripcion y precio</p>
-        <button class="btnDisponibilidad">Disponible</button>
+        <button class="btnDisponibilidad">Ordenar</button>
       </div>
-      <div>
+      <div class="producto">
         <img src="/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
         <h3>Hamburguesa de pollo doble</h3>
         <p>Poner descripcion y precio</p>
-        <button class="btnDisponibilidad">Disponible</button>
+        <button class="btnDisponibilidad">Ordenar</button>
       </div>
+    </section>
     <!--Quienes somos-->
     <section id="quienes-somos">
         <h2>Quienes Somos</h2>
@@ -89,7 +92,7 @@
             <input type="number" placeholder="Telefono" required>
             <input type="text" placeholder="Restaurante" required>
             <textarea name="" id=""></textarea>
-            <button type="submit">Enviar</button>
+            <button class="btnFormulario" type="submit">Enviar</button>
         </form>
     <footer>
         <p>&copy;Todos los derechos reservados 2025 - PlatoCheck</p>

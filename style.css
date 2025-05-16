@@ -10,6 +10,7 @@ body {
 /* Estilos para el botón */
  #barrabúsqueda {
      padding: 5px 20px;
+     border-radius: 5px;
      border-bottom: 0.3px solid;
      display: flex;
      align-items: center;
@@ -55,7 +56,7 @@ body {
  .nav-links {
      list-style: none;
      display: flex;
-     gap: 1.5rem;
+     gap: 20px;
 }
  .nav-links li a {
      color: #964040;
@@ -83,12 +84,101 @@ body {
     justify-content: center;
 }
 
-.productos{
-
+#platos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 0 0;
+    margin: 0 auto;
 }
+
+.producto{
+    width: 30%;
+    padding: 15px;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 20px;
+    margin: auto;
+}
+.producto img{
+    width: 50%;
+    border: none;
+}
+
+
+
 .btnDisponibilidad{
     height: 30px;
     padding: 5px;
-    border: solid;
     border-radius: 5px;
+    background-color: #FACC15;
+    border: 0.1px solid red;
+    cursor: pointer;
+}
+
+.btnDisponibilidad:hover{
+    background-color: lightyellow;
+}
+
+
+.btnMenus{
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FACC15;
+    border: 0.1px solid red;
+    cursor: pointer;
+}
+
+.btnMenus:hover{
+    background-color: lightyellow;
+}
+
+.nav_logo{
+    width: 75px;
+    height: 75px;
+    padding-right: 25pxpx;
+    border: none;
+}
+
+/*Quienes somos*/
+#quienes-somos{
+    text-align: center;
+    padding: 30px;
+}
+
+/*Formulario Contacto*/
+#contactanos{
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+}
+
+input{
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid gray;
+
+}
+
+.btnFormulario{
+    background-color: #FACC15;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #FACC15;
 }
