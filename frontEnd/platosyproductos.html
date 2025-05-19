@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Software para restaurantes que agiliza la toma de comandas y actualiza en tiempo real la disponibilidad de platos. Optimiza tu servicio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platos y Productos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="img/logo.webp">
+</head>
+
+<!-- Sección Comanda -->
+
+
+<body>
+    <nav class="navbar">
+        <a href="#"><img class="nav_logo" src="./img/logo.webp" loading="lazy" alt="logocolor"></a>
+        <div class="logo">PLATO CHECK</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="platosyproductos.html">Platos y productos</a></li>
+          <li><a href="quienesSomos.html">Quiénes somos</a></li>
+          <li><a href="contactanos.html">Contactanos</a></li>
+        </ul>
+      <label for="barrabúsqueda"></label>
+      <input type="text" id="barrabúsqueda" name="barrabúsqueda" required><br><br>
+      <button id="search"><i class='user'></i>Buscar</button>
+    </nav>
+
+<section class="Platos y productos">
+
+<!-- Comanda -->
+<h2>Registrar Comanda</h2>
+  <div id="comanda-form">
+    <div class="mesa-list">
+        <input type="number" id="mesa" placeholder="Digite la Mesa" min="1" required>
+        <input type="number" id="comensales" placeholder="Digite comensales" min="1" required>
+      <button id="reset-comanda">Limpiar comanda</button>
+    </div> 
+    <div class="comanda-list">
+      <h3>Comanda</h3>
+      <p><strong>Mesa:</strong> <span id="comanda-mesa">—</span></p>
+      <p><strong>Comensales:</strong> <span id="comanda-comensales">—</span></p>
+      <ul id="platos-seleccionados"></ul>
+    </div>
+    
+  </div>
+    <!--Botones de menus-->
+  <div>
+      <div class="menus">
+          <div style="margin-block: auto;">
+              <button class="btnMenus" data-filtro="hamburguesa">Hamburguesas</button>
+              <button class="btnMenus" data-filtro="perro-caliente">Perros calientes</button>
+              <button class="btnMenus" data-filtro="salchipapa">Salchipapas</button>
+              <button class="btnMenus" data-filtro="pizzas">Pizzas</button>
+              <button class="btnMenus" data-filtro="pacifico">Antojos del pacífico</button>
+              <button class="btnMenus" data-filtro="all">Mostrar Todos</button>
+          </div>
+      </div>
+    <section id="platos">
+      <div class="producto" data-key="hamburguesa" data-nombre="Hamburguesa Res Sencilla">
+        <img src="/frontEnd/img/hamburguesa-res-sencilla.jpg" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa Sencilla de res</h3>
+        <p>Poner descripcion</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-key="hamburguesa" data-nombre="Hamburguesa Pollo Sencilla">
+        <img src="/frontEnd/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa de pollo sencilla</h3>
+        <p>Poner descripcion</p>
+        <p style="font-weight: bold">$70,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-key="hamburguesa" data-nombre="Hamburguesa Res Doble">
+        <img src="/frontEnd/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa de res doble</h3>
+        <p>Poner descripcion</p>
+        <p style="font-weight: bold">$95,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-key="hamburguesa" data-nombre="Hamburguesa Pollo Doble">
+        <img src="/frontEnd/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa de pollo doble</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-key="hamburguesa" data-nombre="Hamburguesa de pollo con Tocineta">
+        <img src="/frontEnd/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa de pollo con Tocineta</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-key="hamburguesa" data-nombre="Hamburguesa de pollo doble Tocineta">
+        <img src="/frontEnd/img/hamburguesasencilla.webp" alt="imagen hamburguesa sencilla">
+        <h3>Hamburguesa de pollo doble Tocineta</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-categoria="perro-caliente">
+        <img src="/frontEnd/img/perrocalientesencillo.jpg" alt="imagen perrocaliente sencillo">
+        <h3>Perro caliente sencillo</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+       <div class="producto" data-categoria="perro-caliente">
+        <img src="/frontEnd/img/perrocalientesencillo.jpg" alt="imagen perrocaliente sencillo">
+        <h3>Perro caliente sencillo</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+       <div class="producto" data-categoria="perro-caliente">
+        <img src="/frontEnd/img/perrocalientesencillo.jpg" alt="imagen perrocaliente sencillo">
+        <h3>Perro caliente sencillo</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+       <div class="producto" data-categoria="perro-caliente">
+        <img src="/frontEnd/img/perrocalientesencillo.jpg" alt="imagen perrocaliente sencillo">
+        <h3>Perro caliente sencillo</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+       <div class="producto" data-categoria="perro-caliente">
+        <img src="/frontEnd/img/perrocalientesencillo.jpg" alt="imagen perrocaliente sencillo">
+        <h3>Perro caliente sencillo</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+       <div class="producto" data-categoria="perro-caliente">
+        <img src="/frontEnd/img/perrocalientesencillo.jpg" alt="imagen perrocaliente sencillo">
+        <h3>Perro caliente sencillo</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+       <div class="producto" data-categoria="salchipapa">
+        <img src="/frontEnd/img/Salchipapa.jpg" alt="imagen salchipapa sencilla">
+        <h3>Salchipapa Sencilla</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-categoria="salchipapa">
+        <img src="/frontEnd/img/Salchipapa.jpg" alt="imagen salchipapa sencilla">
+        <h3>Salchipapa Sencilla</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-categoria="salchipapa">
+        <img src="/frontEnd/img/Salchipapa.jpg" alt="imagen salchipapa sencilla">
+        <h3>Salchipapa Sencilla</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-categoria="salchipapa">
+        <img src="/frontEnd/img/Salchipapa.jpg" alt="imagen salchipapa sencilla">
+        <h3>Salchipapa Sencilla</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-categoria="salchipapa">
+        <img src="/frontEnd/img/Salchipapa.jpg" alt="imagen salchipapa sencilla">
+        <h3>Salchipapa Sencilla</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+      <div class="producto" data-categoria="salchipapa">
+        <img src="/frontEnd/img/Salchipapa.jpg" alt="imagen salchipapa sencilla">
+        <h3>Salchipapa Sencilla</h3>
+        <p>Poner descripcion y precio</p>
+        <p style="font-weight: bold">$80,0000</p>
+        <button class="ordenar-btn">Ordenar</button>
+      </div>
+
+    </section>
+  </div>
+    <footer>
+        <p>&copy;Todos los derechos reservados 2025 - PlatoCheck</p>
+    </footer>
+</section>
+</body>
+<script src="main.js"></script>
+</html>

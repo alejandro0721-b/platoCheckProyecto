@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Software para restaurantes que agiliza la toma de comandas y actualiza en tiempo real la disponibilidad de platos. Optimiza tu servicio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLATO CHECK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="img/logo.webp">
+</head>
+<body>
+
+<!-- #BARRA DE NAVEGACIÓN -->
+
+    <nav class="navbar">
+        <a href="#"><img class="nav_logo" src="./img/logo.webp" loading="lazy" alt="logocolor"></a>
+        <div class="logo">PLATO CHECK</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="platosyproductos.html">Platos y productos</a></li>
+          <li><a href="quienesSomos.html">Quiénes somos</a></li>
+          <li><a href="contactanos.html">Contactanos</a></li>
+        </ul>
+      <label for="barrabúsqueda"></label>
+      <input type="text" id="barrabúsqueda" name="barrabúsqueda" required><br><br>
+      <button id="search"><i class='user'></i>Buscar</button>
+    </nav>
+
+<!-- #INICIO -->
+<section id="hero">
+  <h1>PLATO  🍽  CHECK</h1>
+  <div class="logo">
+    <img src="img/logoBN.webp" loading="lazy" alt="logoblanco/negro" px="500" height=250">
+  </div>
+  <h2>¡Satisface a tus clientes con órdenes ágiles y seguras!</h2>
+<hr>
+
+ <!-- Stock diario de platos -->
+ <section id="stock-management">
+    <h2>Gestión de Stock Diario</h2>
+    <form id="stock-form">
+      <div class="stock-item">
+        <label for="stock-hamburguesa">Hamburguesa: </label>
+        <input type="number" id="stock-hamburguesa" name="hamburguesa" min="0" value="1" required>
+      </div>
+      <div class="stock-item">
+        <label for="stock-perro-caliente">Perro caliente: </label>
+        <input type="number" id="stock-perro-caliente" name="perro-caliente" min="0" value="1" required>
+      </div>
+      <div class="stock-item">
+        <label for="stock-pizza">Pizza: </label>
+        <input type="number" id="stock-pizza" name="pizza" min="0" value="1" required>
+      </div>
+      <div class="stock-item">
+        <label for="stock-antojos-pacifico">Antojos del Pacifico: </label>
+        <input type="number" id="stock-antojos-pacifico" name="pacifico" min="0" value="1" required>
+      </div>
+      <button type="submit">Guardar Stock</button>
+    </form>
+  </section>
+
+
+  <!-- <video class="bg-video" autoplay muted loop playsinline>
+      <source src="/frontEnd/videos/meseroOptimizado.mp4" type="video/mp4">
+  </video> -->
+</section>
+   <footer>
+        <p>&copy;Todos los derechos reservados 2025 - PlatoCheck</p>
+    </footer>
+</body>
+</html>

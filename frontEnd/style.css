@@ -25,7 +25,7 @@ body {
  h1 {
      font-size: 40px;
      text-align: center;
-     text-shadow: 2px 2px 5px rgb(27, 238, 203);
+     text-shadow: 2px 2px 5px #FACC15;
 }
  h2 {
      font-size: 35px;
@@ -34,14 +34,12 @@ body {
  .container {
      display: flex;
      justify-content: center;
+     z-index: 2;
 }
- img {
-     border: 3px solid rgb(14, 14, 37);
-     border-radius: 200px;
-}
+ 
+
 /* Estilo de la barra de navegación */
  .navbar {
-     border-radius: 10px;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -49,9 +47,12 @@ body {
      padding: 1rem 2rem;
 }
  .logo {
+    display: flex;
      color: #964040;
      font-size: 1.5rem;
      font-weight: bold;
+     align-items: center;
+     justify-content: center;
 }
  .nav-links {
      list-style: none;
@@ -86,7 +87,7 @@ body {
 
 #platos{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -95,31 +96,45 @@ body {
 }
 
 .producto{
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
     padding: 15px;
-    border: 1px solid;
+    border: 1px solid gray;
     text-align: center;
     border-radius: 20px;
     margin: auto;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.producto img{
+    
+}
+
+
+
+
+
+.producto:hover{
+    transform: scale(1.1);
 }
 .producto img{
     width: 50%;
     border: none;
 }
 
-
-
-.btnDisponibilidad{
+.ordenar-btn{
     height: 30px;
     padding: 5px;
     border-radius: 5px;
     background-color: #FACC15;
-    border: 0.1px solid red;
+    border: none;
     cursor: pointer;
 }
 
-.btnDisponibilidad:hover{
-    background-color: lightyellow;
+.ordenar-btn:hover{
+    background-color: rgba(255, 255, 0, 0.897);
 }
 
 
@@ -128,12 +143,13 @@ body {
     padding: 5px;
     border-radius: 5px;
     background-color: #FACC15;
-    border: 0.1px solid red;
+    border: none;
     cursor: pointer;
+    margin-top: 40px;
 }
 
 .btnMenus:hover{
-    background-color: lightyellow;
+    background-color: rgba(255, 255, 0, 0.897);
 }
 
 .nav_logo{
@@ -174,6 +190,10 @@ input{
     border-radius: 5px;
     padding: 10px;
     margin-top: 5px;
+    cursor: pointer;
+}
+.btnFormulario:hover{
+    background-color: rgba(255, 255, 0, 0.897);
 }
 
 footer{
@@ -181,4 +201,72 @@ footer{
     padding: 10px;
     margin-top: 40px;
     background-color: #FACC15;
+    font-weight: bold;
+    position: relative;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;        /* ajusta según prefieras */
+  overflow: hidden;
+  margin-bottom: 2rem;
+  display: flex;
+justify-content: center;
+margin: auto;
+}
+
+.bg-video {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;        /* Vídeo translúcido */
+  z-index: 1;
+  pointer-events: none;
+}
+
+#comanda-form{
+    display: flex;
+    justify-content: space-around;
+}
+
+.mesa-list{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+.mesa-list input{
+    width: 300px;
+    margin: 10px 0;
+    border-radius: 7px;
+}
+
+.comanda-list{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#reset-comanda{
+    background-color: #FACC15;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#reset-comanda:hover{
+    background-color: rgba(255, 255, 0, 0.897);
+}
+
+button{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #374151;
+    font-weight: 500;
 }
