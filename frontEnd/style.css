@@ -98,7 +98,7 @@ body {
 .producto{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 75%;
     padding: 15px;
     border: 1px solid gray;
     text-align: center;
@@ -106,15 +106,12 @@ body {
     margin: auto;
     align-items: center;
     transition: transform 0.3s ease;
-}
-
-.producto img{
     
 }
 
-
-
-
+.producto img{
+    border-radius: 10px;
+}
 
 .producto:hover{
     transform: scale(1.1);
@@ -215,6 +212,11 @@ footer{
 justify-content: center;
 margin: auto;
 }
+
+.logo img{
+    border-radius: 200px;
+}
+
 
 .bg-video {
     position: absolute;

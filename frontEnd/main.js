@@ -1,5 +1,4 @@
 const stockForm       = document.getElementById('stock-form');
-//const stockInputs     = stockForm.querySelectorAll('input[type="number"]');
 const mesaInput       = document.getElementById('mesa');
 const comensalesInput = document.getElementById('comensales');
 const resetBtn        = document.getElementById('reset-comanda');
@@ -7,23 +6,6 @@ const ordenarBtns     = document.querySelectorAll('.ordenar-btn');
 const listaPlatos     = document.getElementById('platos-seleccionados');
 const spanMesa        = document.getElementById('comanda-mesa');
 const spanComensales  = document.getElementById('comanda-comensales');
-
-// Objeto para almacenar stock
-let stock = {};
-
-// Guardar stock desde el formulario
-function guardarStockDesdeForm() {
-  stockInputs.forEach(input => {
-    stock[input.name] = parseInt(input.value, 10);
-  });
-  alert('Stock actualizado:\n' + JSON.stringify(stock));
-}
-
-// Al enviar stock-form
-// stockForm.addEventListener('submit', e => {
-//   e.preventDefault();
-//   guardarStockDesdeForm();
-// });
 
 // Actualizar vista previa de mesa/comensales
 function actualizarEncabezado(e) {
@@ -60,22 +42,6 @@ ordenarBtns.forEach(btn => {
     const maxPlatos  = parseInt(comensalesInput.value, 10);
     const actuales   = listaPlatos.querySelectorAll('li').length;
 
-    // Alertas y control de stock
-    // if (disponibles <= 0) {
-    //   return alert(`Lo siento, ${nombre} está agotado.`);
-    // }
-    // if (disponibles <= 3) {
-    //   alert(`Atención: solo quedan ${disponibles} unidades de ${nombre}.`);
-    // }
-    // if (actuales >= maxPlatos) {
-    //   return alert(`Ya agregaste ${actuales} platos (límite ${maxPlatos}).`);
-    // }
-
-    // Disminuir stock y actualizar campo
-    // stock[key]--;
-    // document.getElementById(`stock-${key}`).value = stock[key];
-
-    // Crear entrada en la comanda
     const li = document.createElement('li');
     li.textContent = nombre;
     const del = document.createElement('button');
